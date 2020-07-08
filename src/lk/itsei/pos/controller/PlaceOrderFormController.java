@@ -114,15 +114,6 @@ public class PlaceOrderFormController implements Initializable {
         allItems = tblPlaceOrderTable.getItems();
         singleItem = tblPlaceOrderTable.getSelectionModel().getSelectedItems();
         singleItem.forEach(allItems::remove);
-//        double totoalOfSelectItem  = 0;
-//
-//        for (Item item : singleItem){
-//
-//            totoalOfSelectItem = totoalOfSelectItem - item.getTotal();
-//
-//        }
-//
-//        total = total - totoalOfSelectItem();
 
     }
 
