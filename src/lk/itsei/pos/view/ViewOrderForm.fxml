@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="777.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.itsei.pos.controller.ViewOrderFromController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="80.0" stroke="#0055ff" strokeType="INSIDE" width="886.0" />
+      <Label layoutX="26.0" layoutY="21.0" prefHeight="39.0" prefWidth="144.0" text=" ITSEI FX POS " textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="158.0" layoutY="17.0" orientation="VERTICAL" prefHeight="47.0" prefWidth="12.0" />
+      <Label layoutX="182.0" layoutY="21.0" prefHeight="39.0" prefWidth="138.0" text=" View Order" textFill="#fcfcfc">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtOrderId" labelFloat="true" layoutX="26.0" layoutY="116.0" onKeyPressed="#enterOrderId" prefHeight="39.0" prefWidth="359.0" promptText="Order ID" />
+      <JFXDatePicker fx:id="txtOrderDate" defaultColor="#003d8f" layoutX="498.0" layoutY="120.0" prefHeight="31.0" prefWidth="352.0" />
+      <JFXTextField fx:id="txtCustomerID" labelFloat="true" layoutX="26.0" layoutY="182.0" prefHeight="31.0" prefWidth="359.0" promptText="Customer ID" />
+      <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="498.0" layoutY="186.0" prefHeight="31.0" prefWidth="352.0" promptText="Customer Name" />
+      <Separator layoutX="26.0" layoutY="246.0" prefHeight="0.0" prefWidth="830.0" />
+      <JFXTextField fx:id="txtItemCode" labelFloat="true" layoutX="26.0" layoutY="273.0" prefHeight="31.0" prefWidth="359.0" promptText="Item Code" />
+      <JFXTextField fx:id="txtItemDescription" labelFloat="true" layoutX="505.0" layoutY="274.0" prefHeight="31.0" prefWidth="352.0" promptText="Item Description" />
+      <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="26.0" layoutY="337.0" prefHeight="31.0" prefWidth="359.0" promptText="Qty. On. Hand" />
+      <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="505.0" layoutY="337.0" prefHeight="31.0" prefWidth="352.0" promptText="Unit Price" />
+      <JFXTextField fx:id="txtqty" labelFloat="true" layoutX="26.0" layoutY="400.0" prefHeight="31.0" prefWidth="359.0" promptText="Qty" />
+      <TableView fx:id="tblviewOrderTable" layoutX="24.0" layoutY="446.0" prefHeight="200.0" prefWidth="842.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="187.0" text="Item Code" />
+          <TableColumn fx:id="colDescription" prefWidth="177.0" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="162.0" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="150.0" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="164.0" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="34.0" layoutY="688.0" prefHeight="59.0" prefWidth="138.0" text="Total :">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="164.0" layoutY="698.0" prefHeight="47.0" prefWidth="131.0" textFill="#020bff">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font></Label>
+      <ImageView fitHeight="65.0" fitWidth="72.0" layoutX="321.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/purchase_order_96px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
